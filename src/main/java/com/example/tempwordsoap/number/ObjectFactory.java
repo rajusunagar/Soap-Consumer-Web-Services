@@ -45,20 +45,6 @@ public class ObjectFactory {
         return new NumberToWordsResponse();
     }
 
-    /**
-     * Create an instance of {@link NumberToDollars }
-     * 
-     */
-    public NumberToDollars createNumberToDollars() {
-        return new NumberToDollars();
-    }
 
-    /**
-     * Create an instance of {@link NumberToDollarsResponse }
-     * 
-     */
-    public NumberToDollarsResponse createNumberToDollarsResponse() {
-        return new NumberToDollarsResponse();
-    }
 
 }

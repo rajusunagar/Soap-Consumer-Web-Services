@@ -34,27 +34,11 @@ public class ObjectFactory {
 <span class="nc" id="L34">    }</span>
 
     /**
-     * Create an instance of {@link FahrenheitToCelsius }
-     * 
-     */
-    public FahrenheitToCelsius createFahrenheitToCelsius() {
-<span class="nc" id="L41">        return new FahrenheitToCelsius();</span>
-    }
-
-    /**
-     * Create an instance of {@link FahrenheitToCelsiusResponse }
-     * 
-     */
-    public FahrenheitToCelsiusResponse createFahrenheitToCelsiusResponse() {
-<span class="nc" id="L49">        return new FahrenheitToCelsiusResponse();</span>
-    }
-
-    /**
      * Create an instance of {@link CelsiusToFahrenheit }
      * 
      */
     public CelsiusToFahrenheit createCelsiusToFahrenheit() {
-<span class="nc" id="L57">        return new CelsiusToFahrenheit();</span>
+<span class="nc" id="L41">        return new CelsiusToFahrenheit();</span>
     }
 
     /**
@@ -62,7 +46,7 @@ public class ObjectFactory {
      * 
      */
     public CelsiusToFahrenheitResponse createCelsiusToFahrenheitResponse() {
-<span class="nc" id="L65">        return new CelsiusToFahrenheitResponse();</span>
+<span class="nc" id="L49">        return new CelsiusToFahrenheitResponse();</span>
     }
 
     /**
@@ -75,7 +59,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = &quot;https://www.w3schools.com/xml/&quot;, name = &quot;string&quot;)
     public JAXBElement&lt;String&gt; createString(String value) {
-<span class="nc" id="L78">        return new JAXBElement&lt;String&gt;(_String_QNAME, String.class, null, value);</span>
+<span class="nc" id="L62">        return new JAXBElement&lt;String&gt;(_String_QNAME, String.class, null, value);</span>
     }
 
 }
