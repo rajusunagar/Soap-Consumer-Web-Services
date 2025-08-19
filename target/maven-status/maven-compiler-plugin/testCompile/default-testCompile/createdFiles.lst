@@ -1,4 +1,4 @@
-com/example/tempwordsoap/controller/TemperatureConversionControllerTest.class
-com/example/tempwordsoap/service/NumberToWordConversionServiceTest.class
-com/example/tempwordsoap/controller/NumberToWordConversionControllerTest.class
-com/example/tempwordsoap/service/TemperatureConversionServiceTest.class
+com/soap/ConsumerWebService/controller/NumberToWordConversionControllerTest.class
+com/soap/ConsumerWebService/controller/TemperatureConversionControllerTest.class
+com/soap/ConsumerWebService/service/TemperatureConversionServiceTest.class
+com/soap/ConsumerWebService/service/NumberToWordConversionServiceTest.class

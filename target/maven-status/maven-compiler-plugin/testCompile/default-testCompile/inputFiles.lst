@@ -1,4 +1,4 @@
-/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/example/tempwordsoap/service/NumberToWordConversionServiceTest.java
-/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/example/tempwordsoap/service/TemperatureConversionServiceTest.java
-/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/example/tempwordsoap/controller/NumberToWordConversionControllerTest.java
-/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/example/tempwordsoap/controller/TemperatureConversionControllerTest.java
+/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/soap/ConsumerWebService/service/TemperatureConversionServiceTest.java
+/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/soap/ConsumerWebService/controller/TemperatureConversionControllerTest.java
+/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/soap/ConsumerWebService/controller/NumberToWordConversionControllerTest.java
+/Users/rajusunagar/Documents/Projects/Soap-Consumer-Web-Services/src/test/java/com/soap/ConsumerWebService/service/NumberToWordConversionServiceTest.java
