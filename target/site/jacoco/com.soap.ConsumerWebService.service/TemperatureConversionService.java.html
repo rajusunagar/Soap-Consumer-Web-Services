@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TemperatureConversionService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Soap-Consumer-Web-Services</a> &gt; <a href="index.source.html" class="el_package">com.soap.ConsumerWebService.service</a> &gt; <span class="el_source">TemperatureConversionService.java</span></div><h1>TemperatureConversionService.java</h1><pre class="source lang-java linenums">package com.soap.ConsumerWebService.service;
+
+import com.soap.ConsumerWebService.temperature.CelsiusToFahrenheit;
+import com.soap.ConsumerWebService.temperature.CelsiusToFahrenheitResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.ws.client.core.WebServiceTemplate;
+import org.springframework.ws.soap.client.core.SoapActionCallback;
+
+@Service
+public class TemperatureConversionService {
+
+    private final WebServiceTemplate temperatureWebServiceTemplate;
+
+    @Autowired
+<span class="fc" id="L17">    public TemperatureConversionService(@Qualifier(&quot;temperatureWebServiceTemplate&quot;) WebServiceTemplate temperatureWebServiceTemplate) {</span>
+<span class="fc" id="L18">        this.temperatureWebServiceTemplate = temperatureWebServiceTemplate;</span>
+<span class="fc" id="L19">    }</span>
+
+    public String convertCelsiusToFahrenheit(double celsius) {
+<span class="fc" id="L22">        CelsiusToFahrenheit request = new CelsiusToFahrenheit();</span>
+<span class="fc" id="L23">        request.setCelsius(String.valueOf(celsius));</span>
+
+<span class="fc" id="L25">        CelsiusToFahrenheitResponse response = (CelsiusToFahrenheitResponse) temperatureWebServiceTemplate</span>
+<span class="fc" id="L26">                .marshalSendAndReceive(request,</span>
+                        new SoapActionCallback(&quot;https://www.w3schools.com/xml/CelsiusToFahrenheit&quot;));
+
+<span class="fc" id="L29">        return response.getCelsiusToFahrenheitResult();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
