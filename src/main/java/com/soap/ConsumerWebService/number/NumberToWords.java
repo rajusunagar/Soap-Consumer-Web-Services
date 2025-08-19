@@ -1,6 +1,9 @@
 
 package com.soap.ConsumerWebService.number;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -29,6 +32,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@Setter
+@Getter
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "ubiNum"
@@ -36,32 +41,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "NumberToWords")
 public class NumberToWords {
 
+    /**
+     * -- GETTER --
+     *  Gets the value of the ubiNum property.
+     *
+     *
+     * -- SETTER --
+     *  Sets the value of the ubiNum property.
+     *
+     @return
+     *     possible object is
+     *     {@link BigInteger }
+      * @param value
+      *     allowed object is
+      *     {@link BigInteger }
+     */
     @XmlElement(required = true)
     @XmlSchemaType(name = "unsignedLong")
     protected BigInteger ubiNum;
-
-    /**
-     * Gets the value of the ubiNum property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getUbiNum() {
-        return ubiNum;
-    }
-
-    /**
-     * Sets the value of the ubiNum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setUbiNum(BigInteger value) {
-        this.ubiNum = value;
-    }
 
 }

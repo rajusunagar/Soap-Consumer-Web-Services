@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NumberToWords.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Soap-Consumer-Web-Services</a> &gt; <a href="index.source.html" class="el_package">com.soap.ConsumerWebService.number</a> &gt; <span class="el_source">NumberToWords.java</span></div><h1>NumberToWords.java</h1><pre class="source lang-java linenums">
 package com.soap.ConsumerWebService.number;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -29,40 +32,33 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+<span class="fc" id="L35">@Setter</span>
+@Getter
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = &quot;&quot;, propOrder = {
     &quot;ubiNum&quot;
 })
 @XmlRootElement(name = &quot;NumberToWords&quot;)
-<span class="fc" id="L37">public class NumberToWords {</span>
-
-    @XmlElement(required = true)
-    @XmlSchemaType(name = &quot;unsignedLong&quot;)
-    protected BigInteger ubiNum;
+<span class="fc" id="L42">public class NumberToWords {</span>
 
     /**
-     * Gets the value of the ubiNum property.
-     * 
-     * @return
+     * -- GETTER --
+     *  Gets the value of the ubiNum property.
+     *
+     *
+     * -- SETTER --
+     *  Sets the value of the ubiNum property.
+     *
+     @return
      *     possible object is
      *     {@link BigInteger }
-     *     
+      * @param value
+      *     allowed object is
+      *     {@link BigInteger }
      */
-    public BigInteger getUbiNum() {
-<span class="nc" id="L52">        return ubiNum;</span>
-    }
-
-    /**
-     * Sets the value of the ubiNum property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setUbiNum(BigInteger value) {
-<span class="fc" id="L64">        this.ubiNum = value;</span>
-<span class="fc" id="L65">    }</span>
+    @XmlElement(required = true)
+    @XmlSchemaType(name = &quot;unsignedLong&quot;)
+<span class="nc" id="L61">    protected BigInteger ubiNum;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

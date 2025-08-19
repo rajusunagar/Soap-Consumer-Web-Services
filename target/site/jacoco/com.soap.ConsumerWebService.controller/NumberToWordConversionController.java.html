@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
     @Autowired
     private NumberToWordConversionService numberToWordConversionService;
 
-    @GetMapping(&quot;/convert/Number-to-words&quot;)
-    public String numberToWords(@RequestParam(&quot;Number&quot;) int number) {
+    @GetMapping(&quot;/convert/number-to-words&quot;)
+    public String numberToWords(@RequestParam(&quot;number&quot;) int number) {
 <span class="fc" id="L17">        String words = numberToWordConversionService.numberToWords(number);</span>
 <span class="fc" id="L18">        return &quot;The Given &quot; + number + &quot; is  ---&gt; &quot; + words + &quot;.&quot;;</span>
     }

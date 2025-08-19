@@ -12,8 +12,8 @@ public class NumberToWordConversionController {
     @Autowired
     private NumberToWordConversionService numberToWordConversionService;
 
-    @GetMapping("/convert/Number-to-words")
-    public String numberToWords(@RequestParam("Number") int number) {
+    @GetMapping("/convert/number-to-words")
+    public String numberToWords(@RequestParam("number") int number) {
         String words = numberToWordConversionService.numberToWords(number);
         return "The Given " + number + " is  ---> " + words + ".";
     }

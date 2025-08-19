@@ -1,6 +1,9 @@
 
 package com.soap.ConsumerWebService.temperature;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -27,6 +30,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@Setter
+@Getter
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "celsius"
@@ -34,31 +39,22 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "CelsiusToFahrenheit")
 public class CelsiusToFahrenheit {
 
-    @XmlElement(name = "Celsius")
-    protected String celsius;
-
     /**
-     * Gets the value of the celsius property.
-     * 
-     * @return
+     * -- GETTER --
+     *  Gets the value of the celsius property.
+     *
+     *
+     * -- SETTER --
+     *  Sets the value of the celsius property.
+     *
+     @return
      *     possible object is
      *     {@link String }
-     *     
+      * @param value
+      *     allowed object is
+      *     {@link String }
      */
-    public String getCelsius() {
-        return celsius;
-    }
-
-    /**
-     * Sets the value of the celsius property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCelsius(String value) {
-        this.celsius = value;
-    }
+    @XmlElement(name = "Celsius")
+    protected String celsius;
 
 }
