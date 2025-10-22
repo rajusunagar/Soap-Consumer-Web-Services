@@ -12,6 +12,7 @@ src/main/java/com/soap/Temperature/
 *.iml
 *.ipr
 .vscode/
+out/
 
 # OS
 .DS_Store
