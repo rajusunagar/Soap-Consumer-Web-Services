@@ -20,15 +20,15 @@ class NumberToWordConversionControllerTest {
     private NumberToWordConversionController controller;
 
     @Test
-    void numberToWords_ShouldReturnFormattedString() {
+    void convertNumberToWords_ShouldReturnFormattedString() {
         // Given
         int number = 42;
-        when(numberToWordConversionService.numberToWords(number)).thenReturn("forty two");
+        when(numberToWordConversionService.convertToWords(number)).thenReturn("forty two");
 
         // When
-        String result = controller.numberToWords(number);
+        String result = controller.convertNumberToWords(number);
 
         // Then
-        assertEquals("The Given 42 is  ---> forty two.", result);
+        assertEquals("42 = forty two", result);
     }
 }

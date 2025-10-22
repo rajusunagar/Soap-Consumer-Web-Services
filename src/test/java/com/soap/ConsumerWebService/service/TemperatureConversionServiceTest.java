@@ -1,7 +1,7 @@
 package com.soap.ConsumerWebService.service;
 
-import com.soap.ConsumerWebService.temperature.CelsiusToFahrenheit;
-import com.soap.ConsumerWebService.temperature.CelsiusToFahrenheitResponse;
+import com.soap.Temperature.CelsiusToFahrenheit;
+import com.soap.Temperature.CelsiusToFahrenheitResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,7 +29,7 @@ class TemperatureConversionServiceTest {
     }
 
     @Test
-    void convertCelsiusToFahrenheit_ShouldReturnCorrectConversion() {
+    void convertToFahrenheit_ShouldReturnCorrectConversion() {
         // Given
         double celsius = 100.0;
         CelsiusToFahrenheitResponse response = new CelsiusToFahrenheitResponse();
@@ -41,9 +41,9 @@ class TemperatureConversionServiceTest {
                 .thenReturn(response);
 
         // When
-        String result = service.convertCelsiusToFahrenheit(celsius);
+        double result = service.convertToFahrenheit(celsius);
 
         // Then
-        assertEquals("212", result);
+        assertEquals(212.0, result);
     }
 }

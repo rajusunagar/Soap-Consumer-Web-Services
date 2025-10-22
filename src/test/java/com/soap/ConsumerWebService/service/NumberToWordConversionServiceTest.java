@@ -28,7 +28,7 @@ class NumberToWordConversionServiceTest {
     }
 
     @Test
-    void numberToWords_ShouldReturnCorrectConversion() {
+    void convertToWords_ShouldReturnCorrectConversion() {
         // Given
         int number = 42;
         NumberToWordsResponse response = new NumberToWordsResponse();
@@ -40,7 +40,7 @@ class NumberToWordConversionServiceTest {
                 .thenReturn(response);
 
         // When
-        String result = service.numberToWords(number);
+        String result = service.convertToWords(number);
 
         // Then
         assertEquals("forty two", result);

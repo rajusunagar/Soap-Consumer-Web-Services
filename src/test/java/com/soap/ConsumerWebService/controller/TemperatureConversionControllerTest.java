@@ -20,15 +20,15 @@ class TemperatureConversionControllerTest {
     private TemperatureConversionController controller;
 
     @Test
-    void celsiusToFahrenheit_ShouldReturnFormattedString() {
+    void convertCelsiusToFahrenheit_ShouldReturnFormattedString() {
         // Given
         double celsius = 100.0;
-        when(temperatureConversionService.convertCelsiusToFahrenheit(celsius)).thenReturn("212.0");
+        when(temperatureConversionService.convertToFahrenheit(celsius)).thenReturn(212.0);
 
         // When
-        String result = controller.celsiusToFahrenheit(celsius);
+        String result = controller.convertCelsiusToFahrenheit(celsius);
 
         // Then
-        assertEquals("100.0 Celsius = 212.0 Fahrenheit.", result);
+        assertEquals("100.0 Celsius = 212.0 Fahrenheit", result);
     }
 }

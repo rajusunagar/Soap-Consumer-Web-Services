@@ -1,8 +1,7 @@
 package com.soap.ConsumerWebService.service;
 
-import com.soap.ConsumerWebService.temperature.CelsiusToFahrenheit;
-import com.soap.ConsumerWebService.temperature.CelsiusToFahrenheitResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.soap.Temperature.CelsiusToFahrenheit;
+import com.soap.Temperature.CelsiusToFahrenheitResponse;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
@@ -11,21 +10,27 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 @Service
 public class TemperatureConversionService {
 
-    private final WebServiceTemplate temperatureWebServiceTemplate;
+    private static final String SOAP_ACTION = "https://www.w3schools.com/xml/CelsiusToFahrenheit";
+    private final WebServiceTemplate webServiceTemplate;
 
-    @Autowired
-    public TemperatureConversionService(@Qualifier("temperatureWebServiceTemplate") WebServiceTemplate temperatureWebServiceTemplate) {
-        this.temperatureWebServiceTemplate = temperatureWebServiceTemplate;
+    public TemperatureConversionService(@Qualifier("temperatureWebServiceTemplate") WebServiceTemplate webServiceTemplate) {
+        this.webServiceTemplate = webServiceTemplate;
     }
 
-    public String convertCelsiusToFahrenheit(double celsius) {
+    public double convertToFahrenheit(double celsius) {
+        CelsiusToFahrenheit request = createRequest(celsius);
+        CelsiusToFahrenheitResponse response = sendRequest(request);
+        return Double.parseDouble(response.getCelsiusToFahrenheitResult());
+    }
+
+    private CelsiusToFahrenheit createRequest(double celsius) {
         CelsiusToFahrenheit request = new CelsiusToFahrenheit();
         request.setCelsius(String.valueOf(celsius));
+        return request;
+    }
 
-        CelsiusToFahrenheitResponse response = (CelsiusToFahrenheitResponse) temperatureWebServiceTemplate
-                .marshalSendAndReceive(request,
-                        new SoapActionCallback("https://www.w3schools.com/xml/CelsiusToFahrenheit"));
-
-        return response.getCelsiusToFahrenheitResult();
+    private CelsiusToFahrenheitResponse sendRequest(CelsiusToFahrenheit request) {
+        return (CelsiusToFahrenheitResponse) webServiceTemplate
+                .marshalSendAndReceive(request, new SoapActionCallback(SOAP_ACTION));
     }
 }
