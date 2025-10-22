@@ -121,7 +121,6 @@
                                     </extraargs>
                                 </wsdlOption>
                             </wsdlOptions>
-                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                         </configuration>
                     </execution>
                     <execution>
@@ -140,7 +139,6 @@
                                     </extraargs>
                                 </wsdlOption>
                             </wsdlOptions>
-                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                         </configuration>
                     </execution>
                 </executions>
