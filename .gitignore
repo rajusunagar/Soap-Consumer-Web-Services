@@ -2,6 +2,10 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
+# Generated sources
+src/main/java/com/soap/Number/
+src/main/java/com/soap/Temperature/
+
 # IDE
 .idea/
 *.iws

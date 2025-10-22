@@ -121,7 +121,7 @@
                                     </extraargs>
                                 </wsdlOption>
                             </wsdlOptions>
-                            <sourceRoot>src/main/java</sourceRoot>
+                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                         </configuration>
                     </execution>
                     <execution>
@@ -140,7 +140,7 @@
                                     </extraargs>
                                 </wsdlOption>
                             </wsdlOptions>
-                            <sourceRoot>src/main/java</sourceRoot>
+                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                         </configuration>
                     </execution>
                 </executions>
