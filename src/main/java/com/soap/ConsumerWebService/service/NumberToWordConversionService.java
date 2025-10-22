@@ -2,6 +2,8 @@ package com.soap.ConsumerWebService.service;
 
 import com.soap.Number.NumberToWords;
 import com.soap.Number.NumberToWordsResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
@@ -12,6 +14,7 @@ import java.math.BigInteger;
 @Service
 public class NumberToWordConversionService {
 
+    private static final Logger logger = LoggerFactory.getLogger(NumberToWordConversionService.class);
     private static final String SOAP_ACTION = "https://www.dataaccess.com/webservicesserver/NumberConversion.wso/NumberToWords";
     private final WebServiceTemplate webServiceTemplate;
 
@@ -20,9 +23,12 @@ public class NumberToWordConversionService {
     }
 
     public String convertToWords(int number) {
+        logger.info("Calling SOAP service for number to words conversion: {}", number);
         NumberToWords request = createRequest(number);
         NumberToWordsResponse response = sendRequest(request);
-        return response.getNumberToWordsResult();
+        String result = response.getNumberToWordsResult();
+        logger.info("SOAP service response received: {}", result);
+        return result;
     }
 
     private NumberToWords createRequest(int number) {
