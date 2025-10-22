@@ -1,7 +1,7 @@
 package com.soap.ConsumerWebService.service;
 
-import com.soap.ConsumerWebService.number.NumberToWords;
-import com.soap.ConsumerWebService.number.NumberToWordsResponse;
+import com.soap.Number.NumberToWords;
+import com.soap.Number.NumberToWordsResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

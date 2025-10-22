@@ -2,15 +2,12 @@ com/soap/ConsumerWebService/configuration/SoapClientConfig.class
 com/soap/ConsumerWebService/temperature/CelsiusToFahrenheitResponse.class
 com/soap/ConsumerWebService/temperature/ObjectFactory.class
 com/soap/Temperature/TempConvertSoap.class
-com/soap/ConsumerWebService/number/package-info.class
 com/soap/ConsumerWebService/service/TemperatureConversionService.class
 com/soap/ConsumerWebService/controller/NumberToWordConversionController.class
 com/soap/Number/ObjectFactory.class
 com/soap/ConsumerWebService/service/NumberToWordConversionService.class
-com/soap/ConsumerWebService/number/ObjectFactory.class
 com/soap/Temperature/ObjectFactory.class
 com/soap/Number/NumberToWords.class
-com/soap/ConsumerWebService/number/NumberToWords.class
 com/soap/Number/NumberConversionSoapType.class
 com/soap/ConsumerWebService/controller/TemperatureConversionController.class
 com/soap/ConsumerWebService/ConsumerWebServiceApplication.class
@@ -27,5 +24,4 @@ com/soap/Number/package-info.class
 com/soap/Temperature/FahrenheitToCelsius.class
 com/soap/Temperature/package-info.class
 com/soap/Number/NumberToDollars.class
-com/soap/ConsumerWebService/number/NumberToWordsResponse.class
 com/soap/Temperature/TempConvertHttpPost.class
