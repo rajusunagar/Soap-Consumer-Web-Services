@@ -55,6 +55,42 @@ For result observe the below screenshot
 
 ![Number](https://github.com/rajusunagar/Extio-Task-SoapConsumerWebServices/blob/main/Screenshots/Screenshot%20(58).png)
 
+# Codebase Structure
+
+## Core Components
+
+### 1. Controllers
+- **HomeController**: Serves the main landing page at `/`
+- **TemperatureConversionController**: REST endpoint at `/convert/celsius-to-fahrenheit` for temperature conversion
+- **NumberToWordConversionController**: REST endpoint at `/convert/number-to-words` for number to word conversion
+
+### 2. Services
+- **TemperatureConversionService**: Handles SOAP client calls to W3Schools temperature conversion service
+- **NumberToWordConversionService**: Handles SOAP client calls to DataAccess number conversion service
+
+### 3. Configuration
+- **SoapClientConfig**: Spring configuration for SOAP web service templates and marshallers
+
+### 4. Generated SOAP Clients
+- **com.soap.Temperature**: Auto-generated classes from temperature conversion WSDL
+- **com.soap.Number**: Auto-generated classes from number conversion WSDL
+
+## Key Technologies
+- **Spring Boot 2.7.18**: Main framework
+- **Apache CXF**: SOAP client generation and web service calls
+- **JAXB**: XML marshalling/unmarshalling
+- **Maven**: Build and dependency management
+
+## Build Process
+1. CXF codegen plugin generates SOAP client classes from WSDLs during `generate-sources` phase
+2. Generated classes are placed in `target/generated-sources/cxf` (excluded from Git)
+3. Spring Boot packages everything into executable JAR
+
+## Configuration Files
+- `application.properties`: Server port configuration (8080)
+- `pom.xml`: Maven dependencies and CXF plugin configuration
+- `.gitignore`: Excludes build artifacts and generated sources
+
 
 
 
